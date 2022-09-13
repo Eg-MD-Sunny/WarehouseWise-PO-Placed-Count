@@ -1,9 +1,9 @@
 --Warehouse Wise PO Placed Count
 
-select w.id WarehouseID,
-       w.name Warehouse,
-	   count(distinct po.vendorid) VendorCount,
-	   count(distinct po.id) POCount
+select w.id [WarehouseID],
+       w.name [Warehouse],
+	   count(distinct po.vendorid) [VendorCount],
+	   count(distinct po.id) [POCount]
 
 from purchaseorder po
 join thing t on po.Id = t.purchaseOrderId
